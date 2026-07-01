@@ -1,0 +1,1 @@
+const s=new Date('2020-07-29T22:40:00');function u(){let d=Math.floor((Date.now()-s)/86400000);counter.textContent='Together for '+d+' days ❤️';}u();setInterval(u,60000);
