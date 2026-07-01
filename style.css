@@ -1,174 +1,617 @@
+/* ===================================================
+   OUR UNIVERSE
+   Design by ChatGPT
+===================================================*/
+
+:root{
+
+--gold:#d4af37;
+--gold-light:#f5df8f;
+--black:#070707;
+--glass:rgba(255,255,255,.08);
+--white:#ffffff;
+--shadow:0 10px 40px rgba(0,0,0,.45);
+
+}
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
 }
 
 body{
-background:#000;
-font-family:'Cormorant Garamond',serif;
-color:#ffd54f;
+
+background:#050505;
+color:white;
+font-family:'Poppins',sans-serif;
 overflow-x:hidden;
+
 }
 
-#login{
+canvas{
+
 position:fixed;
-top:0;
 left:0;
+top:0;
 width:100%;
 height:100%;
-background:#000;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:999;
+z-index:-3;
+
 }
 
-#login h1{
-font-family:'Great Vibes',cursive;
-font-size:55px;
-margin-bottom:20px;
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at top,
+rgba(212,175,55,.08),
+transparent 45%);
+
+z-index:-2;
+
 }
 
-#login p{
-margin-bottom:20px;
-font-size:20px;
+section{
+
+width:100%;
+padding:90px 20px;
+
 }
 
-#password{
-width:260px;
-padding:15px;
-border-radius:30px;
-border:2px solid gold;
-background:#111;
-color:white;
-text-align:center;
-font-size:18px;
-}
+.glass{
 
-button{
-margin-top:20px;
-padding:14px 35px;
-background:transparent;
-border:2px solid gold;
-border-radius:40px;
-color:gold;
-font-size:20px;
-cursor:pointer;
-transition:.4s;
-}
-
-button:hover{
-background:gold;
-color:black;
-}
-
-#error{
-margin-top:15px;
-color:#ff4d6d;
-}
-
-#content{
-display:none;
-padding:40px 20px;
-text-align:center;
-}
-
-.container{
-max-width:700px;
+width:min(900px,95%);
 margin:auto;
+
+background:var(--glass);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:28px;
+
+box-shadow:var(--shadow);
+
+padding:45px;
+
 }
 
-.photo img{
-width:260px;
-height:260px;
+.mainPhoto{
+
+display:block;
+
+width:220px;
+height:220px;
+
+margin:auto;
+
 border-radius:50%;
+
 object-fit:cover;
-border:5px solid gold;
-box-shadow:0 0 30px gold;
+
+border:4px solid var(--gold);
+
+box-shadow:
+
+0 0 25px rgba(212,175,55,.5),
+
+0 0 60px rgba(212,175,55,.25);
+
+transition:.6s;
+
+}
+
+.mainPhoto:hover{
+
+transform:scale(1.05);
+
 }
 
 h1{
+
 font-family:'Great Vibes',cursive;
-font-size:70px;
-color:gold;
-}
 
-.heart{
-font-size:60px;
-animation:beat 1s infinite;
-margin:15px 0;
-}
+font-size:78px;
 
-@keyframes beat{
-50%{
-transform:scale(1.2);
-}
+text-align:center;
+
+color:var(--gold);
+
+font-weight:400;
+
 }
 
 h2{
-margin-top:25px;
-font-size:32px;
+
+font-family:'Great Vibes',cursive;
+
+font-size:58px;
+
+text-align:center;
+
+color:var(--gold);
+
+margin-top:20px;
+
+}
+
+span{
+
+color:#ff4b6e;
+
 }
 
 p{
-font-size:28px;
-margin-top:10px;
+
+line-height:1.9;
+
+font-size:20px;
+
+text-align:center;
+
+color:#ececec;
+
 }
 
-.together{
-margin-top:40px;
-font-size:36px;
-font-weight:bold;
+#loader{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:#000;
+
+z-index:9999;
+
+transition:1.2s;
+
+}
+
+#loader h1{
+
+font-size:82px;
+
+}
+
+#loader p{
+
+margin-top:25px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:14px;
+
+color:var(--gold-light);
+
+  }/* ================= HERO ================= */
+
+#hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+#hero p{
+
+margin-top:18px;
+
+font-size:22px;
+
+color:#e8e8e8;
+
 }
 
 #counter{
-margin-top:20px;
-font-size:32px;
-line-height:1.8;
-color:#fff4b0;
-}
 
-.typing{
-margin-top:50px;
-font-size:34px;
-font-style:italic;
-min-height:100px;
-}
+margin-top:35px;
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-top:50px;
-}
-
-.gallery img{
-width:100%;
-border-radius:20px;
-border:2px solid gold;
-}
-
-.footer{
-margin:60px 0;
 font-size:30px;
+
+line-height:1.8;
+
+color:var(--gold-light);
+
+font-weight:300;
+
 }
 
-#stars{
-position:fixed;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/stardust.png");
-opacity:.25;
-z-index:-2;
+#music{
+
+margin-top:35px;
+
+padding:18px 40px;
+
+border-radius:50px;
+
+border:2px solid var(--gold);
+
+background:transparent;
+
+color:var(--gold);
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
 }
 
-#hearts{
-position:fixed;
+#music:hover{
+
+background:var(--gold);
+
+color:black;
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 35px rgba(212,175,55,.35);
+
+}
+
+/* ================= STORY ================= */
+
+#story{
+
+padding-top:20px;
+
+}
+
+.storyBox{
+
+text-align:center;
+
+}
+
+.storyBox h2{
+
+margin-bottom:30px;
+
+}
+
+#storyText{
+
+max-width:650px;
+
+margin:auto;
+
+font-size:22px;
+
+line-height:2;
+
+}
+
+/* ================= GALLERY ================= */
+
+#gallery{
+
+text-align:center;
+
+}
+
+.photos{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-top:45px;
+
+}
+
+.photos img{
+
 width:100%;
-height:100%;
-overflow:hidden;
+
+aspect-ratio:1;
+
+object-fit:cover;
+
+border-radius:24px;
+
+border:2px solid rgba(212,175,55,.4);
+
+transition:.45s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+
+.photos img:hover{
+
+transform:scale(1.05);
+
+border-color:gold;
+
+box-shadow:0 0 30px rgba(212,175,55,.45);
+
+}
+
+/* ================= LETTER ================= */
+
+#letter{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.envelope{
+
+width:420px;
+
+padding:25px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+box-shadow:var(--shadow);
+
+}
+
+.paper{
+
+background:#fffdf5;
+
+border-radius:18px;
+
+padding:35px;
+
+color:#333;
+
+}
+
+.paper h2{
+
+color:#b68b00;
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.paper p{
+
+color:#333;
+
+font-size:22px;
+
+line-height:2;
+
+  }/* ================= FOOTER ================= */
+
+footer{
+
+padding:80px 20px;
+
+text-align:center;
+
+font-size:22px;
+
+color:var(--gold-light);
+
+letter-spacing:2px;
+
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.heartFloat{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:22px;
+
+animation:floatHeart 8s linear forwards;
+
 pointer-events:none;
-z-index:-1;
+
+z-index:20;
+
+opacity:.9;
+
 }
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/* ================= SHOOTING STAR ================= */
+
+.shooting-star{
+
+position:fixed;
+
+width:160px;
+
+height:2px;
+
+background:linear-gradient(90deg,#fff,transparent);
+
+transform:rotate(-35deg);
+
+pointer-events:none;
+
+animation:shoot 1.4s linear forwards;
+
+z-index:-1;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+opacity:0;
+
+transform:translate(0,0) rotate(-35deg);
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-600px,400px) rotate(-35deg);
+
+}
+
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.glass{
+
+opacity:0;
+
+transform:translateY(50px);
+
+animation:fadeUp 1.3s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:54px;
+
+}
+
+h2{
+
+font-size:42px;
+
+}
+
+.mainPhoto{
+
+width:170px;
+
+height:170px;
+
+}
+
+.glass{
+
+padding:28px;
+
+}
+
+#counter{
+
+font-size:22px;
+
+}
+
+.photos{
+
+grid-template-columns:1fr;
+
+}
+
+.paper h2{
+
+font-size:36px;
+
+}
+
+.paper p{
+
+font-size:18px;
+
+}
+
+footer{
+
+font-size:18px;
+
+}
+
+  }
