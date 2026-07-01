@@ -1,77 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sogol ❤️ Amyar</title>
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
 
-<link rel="stylesheet" href="style.css">
+<title>Our Universe ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="style.css">
 
 </head>
 
 <body>
 
-<div id="stars"></div>
-<div id="hearts"></div>
+<canvas id="sky"></canvas>
 
-<div id="login">
+<div id="loader">
 
-<h1>❤️ Our Secret Place ❤️</h1>
+<h1>
 
-<p>Enter our special password</p>
+Sogol
 
-<input type="password" id="password" placeholder="Password">
+<span>❤</span>
 
-<button onclick="checkPassword()">Enter</button>
+Amyar
 
-<p id="error"></p>
+</h1>
 
-</div>
+<p>
 
-<div id="content">
+Loading Our Universe...
 
-<div class="container">
-
-<div class="photo">
-
-<img src="photo.jpg">
+</p>
 
 </div>
 
-<h1>Sogol</h1>
+<section id="hero">
 
-<div class="heart">❤️</div>
+<div class="glass">
 
-<h1>Amyar</h1>
+<img
+src="photo.jpg"
+class="mainPhoto">
 
-<h2>29 July 2020</h2>
+<h2>
 
-<p>Borujerd, Iran</p>
+Sogol
 
-<div class="together">
+<span>❤</span>
 
-❤️ Together For
+Amyar
+
+</h2>
+
+<p>
+
+29 July 2020
+
+<br>
+
+10:40 PM
+
+<br>
+
+Borujerd, Iran
+
+</p>
+
+<div id="counter">
 
 </div>
 
-<div id="counter"></div>
+<button id="music">
 
-<button id="musicBtn">
+🎵
 
-🎵 Play Our Song
+Play Our Song
 
 </button>
 
-<div class="typing">
+</div>
 
-<p id="loveText"></p>
+</section><section id="story">
+
+<div class="glass storyBox">
+
+<h2>Our Story</h2>
+
+<p id="storyText">
+
+On a quiet summer night beneath billions of stars,
+
+our hearts found each other.
+
+Since that beautiful evening in Borujerd,
+
+every day has been another page of our story.
+
+No matter where life takes us,
+
+my favorite place will always be beside you.
+
+</p>
 
 </div>
 
-<div class="gallery">
+</section>
+
+<section id="gallery">
+
+<h2>Our Memories</h2>
+
+<div class="photos">
 
 <img src="photo.jpg">
 
@@ -81,9 +135,31 @@
 
 </div>
 
-<p class="footer">
+</section>
 
-Forever Begins Under This Sky ✨
+<section id="letter">
+
+<div class="envelope">
+
+<div class="paper">
+
+<h2>To My Love ❤️</h2>
+
+<p>
+
+Among billions of stars,
+
+the best thing that ever happened to me
+
+was you.
+
+<br><br>
+
+Forever yours,
+
+<br>
+
+Sogol
 
 </p>
 
@@ -91,11 +167,13 @@ Forever Begins Under This Sky ✨
 
 </div>
 
-<audio id="song">
+</section>
 
-<source src="music.mp3" type="audio/mpeg">
+<footer>
 
-</audio>
+Forever Begins Under This Sky ✨
+
+</footer>
 
 <script src="script.js"></script>
 
