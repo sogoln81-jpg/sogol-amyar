@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sogol ❤️ Amyar</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
 <div id="stars"></div>
+<div id="hearts"></div>
 
-<div class="overlay"></div>
+<div id="login">
 
-<div class="card">
+<h1>❤️ Our Secret Place ❤️</h1>
+
+<p>Enter our special password</p>
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="checkPassword()">Enter</button>
+
+<p id="error"></p>
+
+</div>
+
+<div id="content">
+
+<div class="container">
 
 <div class="photo">
 
@@ -35,53 +43,59 @@
 
 <h1>Sogol</h1>
 
-<div class="heart">❤</div>
+<div class="heart">❤️</div>
 
 <h1>Amyar</h1>
 
-<p class="date">
+<h2>29 July 2020</h2>
 
-29 July 2020
+<p>Borujerd, Iran</p>
 
-<br>
+<div class="together">
 
-10:40 PM
+❤️ Together For
 
-<br>
-
-Borujerd, Iran
-
-</p>
+</div>
 
 <div id="counter"></div>
 
-<a class="music"
-
-href="https://youtu.be/tt2k8PGm-TI"
-
-target="_blank">
+<button id="musicBtn">
 
 🎵 Play Our Song
 
-</a>
+</button>
 
-<p class="quote">
+<div class="typing">
 
-"Among billions of stars,<br>
+<p id="loveText"></p>
 
-the best thing that ever happened to me<br>
+</div>
 
-was you."
+<div class="gallery">
 
-</p>
+<img src="photo.jpg">
 
-<footer>
+<img src="photo.jpg">
+
+<img src="photo.jpg">
+
+</div>
+
+<p class="footer">
 
 Forever Begins Under This Sky ✨
 
-</footer>
+</p>
 
 </div>
+
+</div>
+
+<audio id="song">
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
 
 <script src="script.js"></script>
 
